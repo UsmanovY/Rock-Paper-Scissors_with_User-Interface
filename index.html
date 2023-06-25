@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Rock-Paper-Scissors</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<div class="wrapper center">
+		<div class="card">
+			<div class="card__tittle">
+				<ul>
+					<li>Rock</li>
+					<li>Paper</li>
+					<li>Scissors</li>
+				</ul>
+			</div>
+			<div class="card__score">
+				<p>SCORE</p>
+				<span id="score"></span>
+			</div>
+		</div>
+		<div class="game" id="game">
+			<div class="game__paper middle">
+				<img src="img/Paper.svg" id="paper">
+			</div>
+			<div class="game__scissor middle">
+				<img src="img/Scissors.svg" id="scissors">
+			</div>
+			<div class="game__rock middle">
+				<img src="img/Rock.svg" id="rock">
+			</div>
+		</div>
+
+		<div class="picked">
+			<div class="player">
+				<div class="player__bg middle"></div>
+			</div>
+			
+			<div class="play__again center">
+				<span id="win-text"></span>
+				<span id="lose-text"></span>
+				<span id="draw-text"></span>
+				<button class="btn-play__again">PLAY AGAIN</button>
+			</div>
+
+			<div class="cpu">
+				<div class="cpu__bg middle"></div>
+			</div>
+		</div>
+	</div>
+
+	<div class="modal-bg hide" id="modalShow" data-exit>
+		<div class="modal">
+			<div class="modal__top">
+				<h2>RULES</h2>
+				<span style="cursor: pointer;">
+					<img src="img/Combined Shape.svg" id="clear" height="20px" width="20px">
+				</span>
+			</div>
+			<div class="modal__rules middle">
+				<img src="img/Group 16.svg">
+			</div>
+		</div>
+	</div>
+
+	<button class="btn" onclick="showModal()">
+		<span>rules</span>
+	</button>
+
+
+	<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+	<script src="app.js"></script>
+</body>
+</html>
